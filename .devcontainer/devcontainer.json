@@ -1,0 +1,25 @@
+{
+  "name": "my-awesome-chat-app",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "portsAttributes": {
+    "3000": {
+      "label": "Frontend"
+    },
+    "8080": {
+      "label": "Backend"
+    }
+  },
+  "forwardPorts": [
+    3000,
+    8080
+  ]
+}
